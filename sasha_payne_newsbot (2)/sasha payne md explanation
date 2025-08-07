@@ -1,1 +1,94 @@
 
+📰 Sasha Payne NewsBot
+
+An end-to-end Natural Language Processing system designed to classify, analyze, and extract insights from real-world news data. The application supports media monitoring, business intelligence, and content analysis, with a clean UI built using Streamlit.
+
+
+Problem Statement
+
+With the explosion of digital media, organizations struggle to track, interpret, and act on vast volumes of textual news data. Manual filtering and analysis is time-consuming, error-prone, and not scalable.
+
+Objective: Build a real-time, automated system to:
+
+Classify news articles into topics
+
+Extract named entities and part-of-speech patterns
+
+Analyze sentiment and key grammatical structures
+
+Provide a visual, user-friendly interface for interaction
+
+
+Approach & Methodology
+
+Data Preprocessing 
+
+Cleaned and tokenized raw news headlines and articles  
+Removed stopwords, performed lemmatization
+
+Feature Extraction 
+
+Applied TF-IDF vectorization to transform text into numerical format  
+Selected relevant features for classification
+
+Model Training 
+ 
+Trained a logistic regression classifier on labeled news categories  
+Evaluated model performance using accuracy, precision, and recall
+
+Linguistic Analysis 
+
+Used spaCy for POS tagging, Named Entity Recognition, and dependency parsing  
+Added sentiment scoring using VADER
+
+Interface & Deployment 
+
+Built an interactive Streamlit app for real-time user input and response  
+Visualized model outputs, sentiment graphs, and NER highlights
+
+
+Results & Evaluation
+
+Accuracy: 87.5% on test set
+  
+Entities Detected: Persons, Orgs, Locations, Dates, etc.
+  
+Sentiment Output: Polarity scoring with labeled intensity
+  
+Streamlit UI: Responsive interface for classification and feedback 
+ 
+Deployment: Ready-to-run app on any machine with Python and dependencies
+
+
+Learning Outcomes
+
+Mastered the full lifecycle of an NLP project from preprocessing to deployment 
+ 
+Gained hands-on experience with scikit-learn, spaCy, TF-IDF, and VADER 
+ 
+Learned to build modular, reusable code with clear documentation  
+
+Practiced deploying models using Streamlit and visualizing NLP outputs  
+
+Understood the challenges of working with unstructured text data in real-world domains
+
+How to Run the Project
+
+1.Install Dependencies
+streamlit
+scikit-learn
+nltk
+spacy
+textblob
+joblib
+pandas
+
+pip install -r requirements.txt
+
+2.Download NLP resources and models required for your Sasha Payne NewsBot to perform tokenization, lemmatization, sentiment analysis, and entity recognition.
+python -m nltk.downloader punkt stopwords wordnet
+>> python -m textblob.download_corpora
+>> python -m spacy download en_core_web_sm
+
+3. Train the Model
+python train_model.py
